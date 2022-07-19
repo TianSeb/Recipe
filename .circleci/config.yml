@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:11-stretch
+      - image: circleci/openjdk:11.0.3-jdk-stretch
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -55,7 +55,6 @@ jobs:
             TAG=Release-$(date '+%Y-%m-%d-%H-%M-%S')
             ./gradlew jar
             cd ./build/libs/
-            zip ${ZIP_FILE_NAME}.zip Recipe.jar 
             github-release upload --token ${GITHUB_TOKEN} --owner ${PROJECT_USERNAME} --repo ${PROJECT_REPONAME} --tag ${TAG} --name ${TAG} --body "Release date: ${NOW}" ${ZIP_FILE_NAME}.zip
 workflows:
   version: 2

@@ -1,10 +1,9 @@
-package com.tianseb.recipe.controller;
+package com.tianseb.recipe.controllers;
 
 import com.tianseb.recipe.domain.Recipe;
 import com.tianseb.recipe.service.RecipeService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.provider.EnumSource;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.Mockito;

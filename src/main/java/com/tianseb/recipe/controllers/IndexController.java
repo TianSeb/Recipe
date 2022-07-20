@@ -1,4 +1,4 @@
-package com.tianseb.recipe.controller;
+package com.tianseb.recipe.controllers;
 
 import com.tianseb.recipe.service.RecipeService;
 import lombok.extern.slf4j.Slf4j;

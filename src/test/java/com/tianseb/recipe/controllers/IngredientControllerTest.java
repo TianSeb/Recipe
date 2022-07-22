@@ -1,6 +1,8 @@
 package com.tianseb.recipe.controllers;
 
+import com.tianseb.recipe.commands.IngredientCommand;
 import com.tianseb.recipe.commands.RecipeCommand;
+import com.tianseb.recipe.service.IngredientService;
 import com.tianseb.recipe.service.RecipeService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,6 +22,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class IngredientControllerTest {
     @Mock
     RecipeService recipeService;
+    @Mock
+    IngredientService ingredientService;
     @InjectMocks
     IngredientController ingredientController;
     MockMvc mockMvc;
@@ -44,6 +48,16 @@ class IngredientControllerTest {
 
         //then
         verify(recipeService,times(1)).findCommandById(anyLong());
+    }
+
+    @Test
+    public void testShowIngredient() throws Exception {
+        //given
+        IngredientCommand ingredientCommand = new IngredientCommand();
+
+        //when
+        //when(ingredientService)
+
     }
 
 }

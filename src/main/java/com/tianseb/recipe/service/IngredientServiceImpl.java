@@ -12,7 +12,6 @@ import java.util.Optional;
 @Service
 @Slf4j
 public class IngredientServiceImpl implements IngredientService {
-
     private final IngredientToIngredientCommand ingredientToIngredientCommand;
     private final RecipeRepository recipeRepository;
 
